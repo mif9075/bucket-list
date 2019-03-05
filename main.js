@@ -44,7 +44,7 @@ function addNewItem(event) {
 
     document.querySelector('#newest-item').innerText = '' // Replace that empty string with the actual item!
 
-    document.querySelector('#number-of-items').innerText = 0 // Replace that with the number of items!
+    document.querySelector('#number-of-items').innerText = bucketList.length; // Replace that with the number of items!
 }
 
 function removeItem(event) {
