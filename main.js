@@ -2,6 +2,7 @@
 
 let isStack = true;
 let heading = '';
+let bucketList = [];
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -33,7 +34,8 @@ function addNewItem(event) {
     displayItem(newItem);
 
     // Now comes your part: add the item to the list.
-
+    bucketList.push(newItem);
+    console.log(bucketList);
 
     // Display it in next-item if it's the first item:
     if(false) { // definitely change that condition!
