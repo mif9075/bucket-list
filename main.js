@@ -55,14 +55,15 @@ function removeItem(event) {
         removeLastFromPage();
         // Your code to remove it from the array  goes here!
         bucketList.pop();
-        bucketList = bucketList - 1;
+        
 
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
         bucketList.shift();
-        bucketList = bucketList - 1;
+        
     }
+    document.querySelector('#number-of-items').innerText = bucketList.length;
 }
 
 function toggleQueueAndStack(event) {
