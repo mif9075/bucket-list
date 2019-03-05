@@ -42,11 +42,12 @@ function addNewItem(event) {
         document.querySelector('#next-item').innerText = ''; // Replace that empty string with the actual item!
     } 
 
-    document.querySelector('#newest-item').innerText = '' // Replace that empty string with the actual item!
+    document.querySelector('#newest-item').innerText = 'Newest Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
 
-    document.querySelector('#number-of-items').innerText = bucketList.length; // Replace that with the number of items!
+    document.querySelector('#number-of-items').innerText = 'Number of Items ' + bucketList.length; // Replace that with the number of items! - Completed
 }
 
+// Completed removeItem
 function removeItem(event) {
     // Prevent page reload.
     event.preventDefault()
@@ -55,7 +56,6 @@ function removeItem(event) {
         removeLastFromPage();
         // Your code to remove it from the array  goes here!
         bucketList.pop();
-        
 
     } else {
         removeFirstFromPage();
