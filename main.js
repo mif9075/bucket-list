@@ -38,13 +38,16 @@ function addNewItem(event) {
     console.log(bucketList);
 
     // Display it in next-item if it's the first item:
-    if(false) { // definitely change that condition!
-        document.querySelector('#next-item').innerText = ''; // Replace that empty string with the actual item!
+    if(bucketList.length > 1) { // definitely change that condition!
+        document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -2]; // Replace that empty string with the actual item!
     } 
+        else{
+            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1];
+        }
 
     document.querySelector('#newest-item').innerText = 'Newest Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
 
-    document.querySelector('#number-of-items').innerText = 'Number of Items ' + bucketList.length; // Replace that with the number of items! - Completed
+    document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length; // Replace that with the number of items! - Completed
 }
 
 // Completed removeItem
