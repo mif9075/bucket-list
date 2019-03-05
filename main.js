@@ -51,16 +51,17 @@ function removeItem(event) {
     // Prevent page reload.
     event.preventDefault()
 
-    if(isStack) {
+    if(isStack === true) {
         removeLastFromPage();
         // Your code to remove it from the array  goes here!
-
+        bucketList.pop();
+        bucketList = bucketList - 1;
 
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-
-
+        bucketList.shift();
+        bucketList = bucketList - 1;
     }
 }
 
