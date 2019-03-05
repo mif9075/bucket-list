@@ -1,7 +1,7 @@
 // Global variables ftw
 
-
 let isStack = true;
+let heading = '';
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -68,7 +68,28 @@ function toggleQueueAndStack(event) {
 
     // How can we toggle whether it's a stack or a queue?
     // Your code below!
+
+    if(isStack === false) {
+        isStack= true;
+        heading = 'The Bucket List - Stack';        
+
+
+    } else {
+        isStack = false;
+        heading = 'The Bucket List - Queue';
+
+    }
+    changeHeading();
+
+
 }
+
+// Heading for the different Apps.
+function changeHeading() {
+    document.querySelector('#heading').innerText = heading;
+}
+
+
 
 /*
 
