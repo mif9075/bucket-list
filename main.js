@@ -59,12 +59,12 @@ function removeItem(event) {
     if(isStack === true) {
         removeLastFromPage();
         // Your code to remove it from the array  goes here!
-        completed += bucketList.pop();
+        completed = completed + ' ' + bucketList.pop();
 
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-        completed += bucketList.shift();
+        completed = completed + ' ' + bucketList.shift();
     }
     document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
     document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length;
