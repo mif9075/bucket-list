@@ -5,6 +5,14 @@ body {
   
   @media screen and (min-width: 720px) {
     body {
-      flex-direction: row;
+        flex-direction: row;
+    }
+    form {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+    content {
+        width: 400px;
     }
   }
