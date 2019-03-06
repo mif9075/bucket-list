@@ -66,7 +66,15 @@ function removeItem(event) {
         bucketList.shift();
         
     }
-    document.querySelector('#number-of-items').innerText = bucketList.length;
+    document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length;
+    document.querySelector('#newest-item').innerText = 'Newest Item: ' + bucketList[bucketList.length -1];
+    if(bucketList.length > 1) { // definitely change that condition!
+        document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -2]; // Replace that empty string with the actual item!
+    } 
+        else{
+            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1];
+        }
+
 }
 
 function toggleQueueAndStack(event) {
