@@ -78,7 +78,7 @@ function removeItem(event) {
         document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
     } 
         else{
-            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -2];
+            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[0];
         }
 
 }
