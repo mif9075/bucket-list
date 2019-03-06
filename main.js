@@ -87,12 +87,12 @@ function toggleQueueAndStack(event) {
 
     if(isStack === false) {
         isStack= true;
-        heading = 'The Bucket List - Mode: Stack';        
+        heading = 'The Bucket List: Mode: Stack';        
         document.querySelector('#toggle').innerText = 'Toggle to Queue';
 
     } else {
         isStack = false;
-        heading = 'The Bucket List - Mode: Queue';
+        heading = 'The Bucket List: Mode: Queue';
         document.querySelector('#toggle').innerText = 'Toggle to Stack';
     }
     changeHeading();
