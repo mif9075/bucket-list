@@ -3,6 +3,7 @@
 let isStack = true;
 let heading = '';
 let bucketList = [];
+let completed = [];
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -58,14 +59,14 @@ function removeItem(event) {
     if(isStack === true) {
         removeLastFromPage();
         // Your code to remove it from the array  goes here!
-        bucketList.pop();
+        completed += bucketList.pop();
 
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-        bucketList.shift();
-        
+        completed += bucketList.shift();
     }
+    document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
     document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length;
     document.querySelector('#newest-item').innerText = 'Newest Item: ' + bucketList[bucketList.length -1];
     if(bucketList.length > 1) { // definitely change that condition!
