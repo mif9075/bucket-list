@@ -40,13 +40,13 @@ function addNewItem(event) {
 
     // Display it in next-item if it's the first item:
     if(bucketList.length > 1) { // definitely change that condition!
-        document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -2]; // Replace that empty string with the actual item!
+        document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
     } 
         else{
-            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1];
+            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[0];
         }
 
-    document.querySelector('#newest-item').innerText = 'Newest Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
+    document.querySelector('#top-item').innerText = 'Top Item: ' + bucketList[0]; // Replace that empty string with the actual item!
 
     document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length; // Replace that with the number of items! - Completed
 }
@@ -69,15 +69,16 @@ function removeItem(event) {
     }
     document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
     document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length;
-    document.querySelector('#newest-item').innerText = 'Newest Item: ' + bucketList[bucketList.length -1];
+    
+    document.querySelector('#top-item').innerText = 'Top Item: ' + bucketList[bucketList.length - 1];
     
     
     
     if(bucketList.length > 1) { // definitely change that condition!
-        document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -2]; // Replace that empty string with the actual item!
+        document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
     } 
         else{
-            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1];
+            document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -2];
         }
 
 }
