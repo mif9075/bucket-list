@@ -1,6 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
+    background-color: greenyellow;
   }
   form {
       display: flex;
@@ -15,7 +16,7 @@ body {
   @media screen and (min-width: 720px) {
     body {
         flex-direction: row;
-        
+        background-color: yellowgreen;
     }
     header {
         width: 300px;
