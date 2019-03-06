@@ -1,31 +1,38 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: greenyellow;
+    
   }
   form {
       display: flex;
       flex-direction: column;
-      
+      background-color: greenyellow;
   }
 
   header, content, form {
+    border: 1px solid;
+    background-color: greenyellow;
+  }
+
+  content > ul {
     border: 1px solid;
   }
 
   @media screen and (min-width: 720px) {
     body {
         flex-direction: row;
-        background-color: yellowgreen;
+        
     }
     header {
         width: 300px;
+        
     }
 
     form {
         width: 300px;
         display: flex;
         flex-direction: column;
+
     }
     content {
         width: 400px;
