@@ -2,12 +2,25 @@ body {
     display: flex;
     flex-direction: column;
   }
-  
+  form {
+      display: flex;
+      flex-direction: column;
+      
+  }
+
+  header, content, form {
+    border: 1px solid;
+  }
+
   @media screen and (min-width: 720px) {
     body {
         flex-direction: row;
         
     }
+    header {
+        width: 300px;
+    }
+
     form {
         width: 300px;
         display: flex;
@@ -15,5 +28,7 @@ body {
     }
     content {
         width: 400px;
+        display: flex;
+        flex-direction: column;
     }
   }
