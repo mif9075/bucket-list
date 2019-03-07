@@ -2,8 +2,9 @@
 
 let isStack = true;
 let heading = '';
-let bucketList = [];
-let completed = [];
+let modes = '';
+const bucketList = [];
+const completed = [];
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -67,10 +68,11 @@ function removeItem(event) {
         // Your code to remove it from the array goes here!
         completed = completed + '\n ' + bucketList.shift();
     }
+
     document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
     document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length;
     
-    document.querySelector('#top-item').innerText = 'Top Item: ' + bucketList[bucketList.length - 1];
+    document.querySelector('#top-item').innerText = 'Top Item: ' + bucketList[0];
     
     
     
@@ -92,12 +94,15 @@ function toggleQueueAndStack(event) {
 
     if(isStack === false) {
         isStack= true;
-        heading = 'The Bucket List: Mode: Stack';        
+        heading = 'The Bucket List: Mode: Stack';   
+        modes = 'Stack Mode: Removes Item from the Bottom of List.'     
         document.querySelector('#toggle').innerText = 'Toggle to Queue';
+    
 
     } else {
         isStack = false;
         heading = 'The Bucket List: Mode: Queue';
+        modes = 'Queue Mode: Removes Item from the Top of the List and move it to Completed.'
         document.querySelector('#toggle').innerText = 'Toggle to Stack';
     }
     changeHeading();
@@ -108,6 +113,7 @@ function toggleQueueAndStack(event) {
 // Heading for the different Apps.
 function changeHeading() {
     document.querySelector('#heading').innerText = heading;
+    document.querySelector('#modes').innerText = modes;
 }
 
 
