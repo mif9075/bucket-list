@@ -74,14 +74,18 @@ function removeItem(event) {
 
     document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
     document.querySelector('#number-of-items').innerText = 'Number of Items: ' + bucketList.length;
-    
     document.querySelector('#top-item').innerText = 'Top Item: ' + bucketList[0];
-    
     
     
     if(bucketList.length > 1) { // definitely change that condition!
         document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[bucketList.length -1]; // Replace that empty string with the actual item!
     } 
+
+        else if(bucketList.length === 0){
+            document.querySelector('#next-item').innerText = 'Next Item: None';
+            document.querySelector('#top-item').innerText = 'Top Item: None';
+        }    
+
         else{
             document.querySelector('#next-item').innerText = 'Next Item: ' + bucketList[0];
         }
@@ -110,8 +114,6 @@ function toggleQueueAndStack(event) {
         document.querySelector('#remove').innerText = 'Complete Item on Top of the List';
     }
     changeHeading();
-
-
 }
 
 // Heading for the different Apps.
@@ -119,8 +121,6 @@ function changeHeading() {
     document.querySelector('#heading').innerText = heading;
     document.querySelector('#modes').innerText = modes;
 }
-
-
 
 /*
 
