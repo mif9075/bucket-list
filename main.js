@@ -109,9 +109,9 @@ function toggleQueueAndStack(event) {
     } else {
         isStack = false;
         heading = 'The Bucket List:\n Queue Mode';
-        modes = 'Queue Mode: Send Completed Top Bucket Item to Completed Section.'
+        modes = 'Queue Mode: Send Top Completed Bucket Item to Completed Section.'
         document.querySelector('#toggle').innerText = 'Toggle to Stack';
-        document.querySelector('#remove').innerText = 'Complete Item on Top of the List';
+        document.querySelector('#remove').innerText = 'Complete Top Bucket Item';
     }
     changeHeading();
 }
