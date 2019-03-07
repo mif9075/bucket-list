@@ -22,6 +22,14 @@ body {
     font-size: large;
   }
 
+
+  button {
+    color: #900;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+
 @media screen and (min-width: 720px) {
     body {
         flex-direction: row;
@@ -44,4 +52,5 @@ body {
         display: flex;
         flex-direction: column;
     }
+
   }
