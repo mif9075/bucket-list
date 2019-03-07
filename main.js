@@ -5,7 +5,7 @@ let heading = '';
 let modes = '';
 const bucketList = [];
 const completed = [];
-let i = 0;
+// let i = 0;
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -67,7 +67,8 @@ function removeItem(event) {
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-        completed[i++] = ' ' + bucketList.shift();
+        completed.push(' ' + bucketList.shift());
+        // completed[completed.length] = ' ' + bucketList.shift();
         console.log(completed);
     }
 
