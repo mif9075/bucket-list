@@ -38,7 +38,7 @@ function addNewItem(event) {
 
     // Now comes your part: add the item to the list.
     bucketList.push(newItem);
-    // console.log(bucketList);
+    console.log(bucketList);
 
     // Display it in next-item if it's the first item:
     if(bucketList.length > 1) { // definitely change that condition!
@@ -67,8 +67,8 @@ function removeItem(event) {
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-        completed[i++] = bucketList.shift();
-        
+        completed[i++] = ' ' + bucketList.shift();
+        console.log(completed);
     }
 
     document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
@@ -96,16 +96,17 @@ function toggleQueueAndStack(event) {
 
     if(isStack === false) {
         isStack= true;
-        heading = 'The Bucket List: Mode: Stack';   
-        modes = 'Stack Mode: Removes Item from the Bottom of List.'     
+        heading = 'The Bucket List:\n Stack Mode';   
+        modes = 'Stack Mode: Delete Item from the Bottom of the List.'     
         document.querySelector('#toggle').innerText = 'Toggle to Queue';
-    
+        document.querySelector('#remove').innerText = 'Delete Item';
 
     } else {
         isStack = false;
-        heading = 'The Bucket List: Mode: Queue';
-        modes = 'Queue Mode: Removes Item from the Top of the List and move it to Completed.'
+        heading = 'The Bucket List:\n Queue Mode';
+        modes = 'Queue Mode: Send Completed Top Bucket Item to Completed Section.'
         document.querySelector('#toggle').innerText = 'Toggle to Stack';
+        document.querySelector('#remove').innerText = 'Complete Item on Top of the List';
     }
     changeHeading();
 
