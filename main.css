@@ -22,11 +22,15 @@ body {
     font-size: large;
   }
 
+  input {
+    margin: 10px;
+  }
 
   button {
     color: #900;
     font-weight: bold;
     text-transform: uppercase;
+    margin: 10px;
   }
 
 
