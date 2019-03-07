@@ -5,6 +5,7 @@ let heading = '';
 let modes = '';
 const bucketList = [];
 const completed = [];
+let i = 0;
 
 // Set init to run when the window loads.
 window.onload = init;
@@ -37,7 +38,7 @@ function addNewItem(event) {
 
     // Now comes your part: add the item to the list.
     bucketList.push(newItem);
-    console.log(bucketList);
+    // console.log(bucketList);
 
     // Display it in next-item if it's the first item:
     if(bucketList.length > 1) { // definitely change that condition!
@@ -66,7 +67,8 @@ function removeItem(event) {
     } else {
         removeFirstFromPage();
         // Your code to remove it from the array goes here!
-        completed = completed + '\n ' + bucketList.shift();
+        completed[i++] = bucketList.shift();
+        
     }
 
     document.querySelector('#completed-item').innerText = 'Completed: ' + completed;
